@@ -9,6 +9,7 @@ import {setCapsules} from './store/capsuleSlice';
 
 function App() {
   const dispatch = useDispatch();
+
   React.useEffect(() => {
     let headers = new Headers();
     headers.append('Authorization', 'Basic c2F0aHlhc2VlbGFuOnRlc3Q=');
@@ -24,6 +25,7 @@ function App() {
         })
         .catch(error => console.log('error', error));
   }, [dispatch]);
+
   return (
       <div className="grey">
         <Nav/>
